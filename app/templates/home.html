@@ -1,15 +1,15 @@
 <aside>
     <!-- https://logomakr.com/ -->
     <header><img src=/assets/images/talke-logo.png alt="talke logo"></header>
+    <button id ="room-button" type="button" ng-click="">Add Room</button>
+    <div  id="room-list">
 
-    <div class="room-list">
-        <button type="button" ng-click="">Add Room</button>
-        <p> {{ home.name }} </p>
+
+            <ul ng-repeat="room in home.roomsList">
+                <li><a href="#">{{ room.$value }}</a><li>
+            </ul>
+
             <!-- limit form to 10 char... see ngMessages service https://code.angularjs.org/1.6.6/angular-messages.js -->
-
-
-
-
     </div>
 </aside>
 <article>

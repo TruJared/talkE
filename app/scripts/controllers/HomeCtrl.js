@@ -1,10 +1,12 @@
 (function() {
-    function HomeCtrl() {
-        console.log('works')
-        this.name = 'jared'
+    function HomeCtrl(Room) {
+        this.name = 'jared';
+        this.roomsList = Room.all;
+        console.log(Room.all);
+
     }
 
     angular
         .module('talke')
-        .controller('HomeCtrl', HomeCtrl);
+        .controller('HomeCtrl', ['Room', HomeCtrl]);
 })();

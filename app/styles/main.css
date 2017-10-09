@@ -29,6 +29,20 @@ body {
     display: none;
 }
 
+a {
+    text-decoration: none;
+    color: #76bd0f
+}
+
+a:hover {
+    color: #76FF0F;
+    text-shadow:  5px 5px 5px black;
+}
+
+a:visited {
+    color: #76bd0f;
+}
+
 
 aside {
     position: fixed;
@@ -46,7 +60,6 @@ aside {
     border-bottom-right-radius: 25px;
     background-color: #555;
 
-    -webkit-box-shadow: 3px 0 5px;
         box-shadow: 3px 0 5px;
 }
 
@@ -62,7 +75,6 @@ button {
   font-size: 20px;
   font-weight: bold;
   width: 150px;
-  margin: 10px 0 0;
   padding: 15px 0;
   color: #76bd0f;
   background: #5F075F;
@@ -87,6 +99,13 @@ button:active {
   box-shadow: none;
 }
 
+#room-button {
+    margin-top: 150px;
+    margin-left: 32px;
+    position: fixed;
+    left: 0;
+}
+
 header {
 
     width: 215px;
@@ -100,19 +119,20 @@ header {
 header img {
     width: 175px;
     margin-top: 15px;
-    margin-left: 15px;
-}
-
-.room-list {
-    margin: 150px 2px 0;
 
 }
 
-.room-list li {
+#room-list{
+    margin-top: 220px;
+}
+
+
+
+#room-list li {
     font-family: 'Audiowide', cursive;
     font-size: 28px;
 
-    padding: 8px;
+    padding: 3px;
 
     list-style: none;
 
@@ -145,7 +165,6 @@ footer {
 
     padding-top: 5px;
 }
-
 
 
 footer li {
