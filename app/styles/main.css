@@ -5,6 +5,16 @@ font-family: 'Exo 2', sans-serif;
 
 */
 
+/****** TO Do ******/
+/*
+
+better organization
+
+remove duplicate code
+
+*/
+/**********************/
+
 
 
 * {
@@ -23,31 +33,21 @@ body {
     color: #212121;
 }
 
-/*possibly a bad idea*/
 
 ::-webkit-scrollbar {
     display: none;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 
-    color: #76bd0f;
+    color: #76bd0f !important;
 }
 
 a:hover {
-    color: #76ff0f;
     text-shadow: 5px 5px 5px black;
 }
 
-a:visited {
-    color: #76bd0f;
-}
-li {
-    /* keep cursor consistent */
-    cursor: pointer;
-    cursor: hand;
-}
 
 
 aside {
@@ -111,40 +111,51 @@ button:active {
     box-shadow: none;
 }
 
+button[disabled],
+button:focus[disabled],
+button:hover[disabled],
+button:active[disabled]  {
+    cursor: default;
+    background-color: #444;
+    color: #555;
+    box-shadow: none;
+}
+
 #room-button {
     position: fixed;
     left: 0;
 
-    margin-top: 150px;
+    margin-top: 160px;
     margin-left: 32px;
 }
 
-header {
+.main-header {
     position: fixed;
 
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 
     width: 215px;
-    margin-bottom: 10px;
+    height: 220px;
 
     background-color: #555;
 }
 
-header img {
+.main-header img {
     width: 175px;
     margin-top: 15px;
 }
 
 #room-list {
-    margin-top: 220px;
+    margin-top: 225px;
 }
+
 
 #room-list li {
     font-family: 'Audiowide', cursive;
     font-size: 28px;
 
-    padding: 3px;
+    padding: 2px;
 
     list-style: none;
 
@@ -186,6 +197,97 @@ footer li img {
     width: 25px;
     padding: 0 3px;
 }
+
+/****** MODAL STYLE ******/
+
+.modal-sm {  /* overrides default behavior to keep modal from expanding */
+    width: 350px;
+    height: 400px;
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    margin-left: -125px;
+    margin-right: -200px;
+}
+
+.modal-header {
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    border-bottom-color: #76bd0f;
+}
+
+.modal-body {
+    font-size: 16px;
+
+}
+
+.modal-content {
+    padding: 5px 5px 0 5px;
+}
+
+
+.modal-list li{
+    list-style: none;
+    pointer: default;
+    cursor: default;
+}
+
+.modal-button {
+    font-size: 20px;
+    font-weight: bold;
+
+    width: 85px;
+    padding: 5px;
+
+    margin-bottom: 5px;
+    margin-left: 5px;
+
+
+    cursor: pointer;
+    cursor: hand;
+
+    color: #76bd0f;
+    border: thin solid black;
+    border-radius: 5px;
+    background: #5f075f;
+}
+
+.modal-button:focus {
+    outline: none;
+    background: #5f075f;
+}
+
+.modal-button:hover {
+    font-weight: bold;
+    background: #5f075f;
+    color: #76ff0f;
+    box-shadow: 5px 5px 5px black;
+}
+
+.modal-button:active {
+    font-weight: bold;
+    background: #5f075f;
+    color: #76bd0f;
+    box-shadow: none;
+}
+
+.modal-input {
+
+    padding: 5px;
+    border: thin solid #76bd0f;
+}
+
+.modal-footer p {
+    clear: both;
+    float: left;
+}
+
+.modal-warning{
+
+    font-weight: bold;
+    color: #AAA;
+}
+
 
 
 

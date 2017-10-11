@@ -1,20 +1,21 @@
-<!-- sample code for testing -->
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Enter Room Name</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <ul class="modal-list">
+        <ul ng-repeat="rule in modal.rules">
+            <li>{{ rule }}</li>
 
+        </ul>
+    </ul>
+    <input class="modal-input" type="text" id="input" ng-model="modal.newRoom" ng-minlength="modal.minChar" ng-maxlength="modal.maxChar" placeholder="Name Your Room">
 
-        <div class="modal-header">
-            <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
-        </div>
-        <div class="modal-body" id="modal-body">
-            <ul>
-                <ul ng-repeat="rule in modal.rules">
-                    <li>Rule: {{ rule }}</li>
-                </ul>
-            </ul>
+</div>
+<div class="modal-footer">
 
-            <input type="text" name="input" ng-model="modal.newRoom" placeholder="room name goes here"  style="margin: 10px;">
-
-
-        </div>
-            <button class="btn btn-primary" type="button" ng-click="modal.ok()" style ="width: 70px; margin: 10px;">yes</button>
-            <button class="btn btn-warning" type="button" ng-click="modal.cancel()" style ="width: 70px; margin: 10px;">nope</button>
-        </div>
+    <!-- room validation; works along with ng-minLength and ng-maxLength -->
+    <p class="modal-warning" ng-hide="modal.newRoom">Invalid Name</p>
+    <p ng-hide="!modal.newRoom">{{ modal.newRoom }}</p>
+    <button class="modal-button" type="button" ng-disabled="!modal.newRoom" ng-click="modal.ok()">Confirm</button>
+    <button class="modal-button" type="button" ng-click="modal.cancel() ">Cancel</button>
+</div>

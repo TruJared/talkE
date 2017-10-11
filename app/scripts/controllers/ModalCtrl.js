@@ -1,20 +1,26 @@
 (function() {
     function ModalCtrl(Room, $uibModalInstance) {
         this.newRoom = '';
+        this.minChar = 3;
+        this.maxChar = 10;
+
+
 
         this.rules = {
-            ruleOne: 'one',
-            ruleTwo: 'two',
-            ruleThree: 'three'
+            ruleOne: 'Room must be 3 to 10 characters in length.',
+            //ruleTwo: 'Room can not be a duplicate name. (not currently implemented).'      ?????how to implement?????//
         };
+
 
         this.ok = function(newRoom) {
             $uibModalInstance.close(Room.add(this.newRoom));
         };
 
         this.cancel = function() {
-            $uibModalInstance.close(console.log('nope'));
+            $uibModalInstance.close();
         };
+
+
     }
 
 
