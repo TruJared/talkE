@@ -3,9 +3,9 @@
         this.newRoom = '';
 
         this.rules = {
-            ruleOne: 'one',
-            ruleTwo: 'two',
-            ruleThree: 'three'
+            ruleOne: 'Room name can be no less than 3 characters',
+            ruleTwo: 'Room name can be no more than 10 characters.',
+            ruleThree: 'Room can not be a duplicate name.' // not case sens. how to impliment??
         };
 
         this.ok = function(newRoom) {

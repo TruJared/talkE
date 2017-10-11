@@ -30,7 +30,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 
     color: #76bd0f;
 }
@@ -41,7 +41,7 @@ a:hover {
 }
 
 a:visited {
-    color: #76bd0f;
+    color: #76bd0f !important;
 }
 li {
     /* keep cursor consistent */
@@ -119,7 +119,7 @@ button:active {
     margin-left: 32px;
 }
 
-header {
+.main-header {
     position: fixed;
 
     border-top-right-radius: 25px;
@@ -131,7 +131,7 @@ header {
     background-color: #555;
 }
 
-header img {
+.main-header img {
     width: 175px;
     margin-top: 15px;
 }
@@ -139,6 +139,7 @@ header img {
 #room-list {
     margin-top: 220px;
 }
+
 
 #room-list li {
     font-family: 'Audiowide', cursive;
@@ -186,6 +187,68 @@ footer li img {
     width: 25px;
     padding: 0 3px;
 }
+
+/****** MODAL STYLE ******/
+
+.modal-header {
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    border-bottom-color: #76bd0f;
+}
+
+.modal-body {
+    font-size: 16px;
+}
+
+
+.modal-list li{
+    list-style: none;
+}
+
+.modal-button {
+    font-size: 20px;
+    font-weight: bold;
+
+    width: 85px;
+    padding: 5px;
+    margin: 0 0 10px 10px;
+
+    cursor: pointer;
+    cursor: hand;
+
+    color: #76bd0f;
+    border: thin solid black;
+    border-radius: 5px;
+    background: #5f075f;
+}
+
+.modal-button:focus {
+    outline: none;
+    background: #5f075f;
+}
+
+.modal-button:hover {
+    font-weight: bold;
+    background: #5f075f;
+    color: #76ff0f;
+    box-shadow: 5px 5px 5px black;
+}
+
+.modal-button:active {
+    font-weight: bold;
+    background: #5f075f;
+    color: #76bd0f;
+    box-shadow: none;
+}
+
+.modal-input {
+
+    padding: 5px;
+    border: thin solid #76bd0f;
+
+}
+
+
 
 
 
