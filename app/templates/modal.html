@@ -1,0 +1,20 @@
+<!-- sample code for testing -->
+
+
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <ul>
+                <ul ng-repeat="rule in modal.rules">
+                    <li>Rule: {{ rule }}</li>
+                </ul>
+            </ul>
+
+            <input type="text" name="input" ng-model="modal.newRoom" placeholder="room name goes here"  style="margin: 10px;">
+
+
+        </div>
+            <button class="btn btn-primary" type="button" ng-click="modal.ok()" style ="width: 70px; margin: 10px;">yes</button>
+            <button class="btn btn-warning" type="button" ng-click="modal.cancel()" style ="width: 70px; margin: 10px;">nope</button>
+        </div>

@@ -1,9 +1,9 @@
 <aside>
     <!-- https://logomakr.com/ -->
     <header><img src=/assets/images/talke-logo.png alt="talke logo"></header>
-    <button id ="room-button" type="button" ng-click="">Add Room</button>
+    <!-- launch modal -->
+    <button id ="room-button" type="button" ng-click="home.addRoom()">Add Room</button>
     <div  id="room-list">
-
 
             <ul ng-repeat="room in home.roomsList">
                 <li><a href="#">{{ room.$value }}</a><li>

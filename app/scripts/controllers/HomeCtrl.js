@@ -1,12 +1,20 @@
 (function() {
-    function HomeCtrl(Room) {
-        this.name = 'jared';
+    function HomeCtrl(Room, $uibModal) {
         this.roomsList = Room.all;
-        console.log(Room.all);
+
+        // loads ng UI library and modal controller -- used to add rooms
+        this.addRoom = function() {
+            $uibModal.open ({
+                templateUrl: '/templates/modal.html',
+                controller: 'ModalCtrl as modal',
+
+
+            });
+        };
 
     }
 
     angular
         .module('talke')
-        .controller('HomeCtrl', ['Room', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl]);
 })();

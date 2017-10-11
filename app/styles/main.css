@@ -31,16 +31,22 @@ body {
 
 a {
     text-decoration: none;
-    color: #76bd0f
+
+    color: #76bd0f;
 }
 
 a:hover {
-    color: #76FF0F;
-    text-shadow:  5px 5px 5px black;
+    color: #76ff0f;
+    text-shadow: 5px 5px 5px black;
 }
 
 a:visited {
     color: #76bd0f;
+}
+li {
+    /* keep cursor consistent */
+    cursor: pointer;
+    cursor: hand;
 }
 
 
@@ -54,13 +60,13 @@ aside {
     width: 215px;
     height: 100%;
     margin-top: -10px;
+
     text-align: center;
 
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     background-color: #555;
-
-        box-shadow: 3px 0 5px;
+    box-shadow: 3px 0 5px;
 }
 
 aside div {
@@ -72,45 +78,54 @@ article {
 }
 
 button {
-  font-size: 20px;
-  font-weight: bold;
-  width: 150px;
-  padding: 15px 0;
-  color: #76bd0f;
-  background: #5F075F;
-  border: thin solid black;
-  border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
 
+    width: 150px;
+    padding: 15px 0;
+
+    cursor: pointer;
+    cursor: hand;
+
+    color: #76bd0f;
+    border: thin solid black;
+    border-radius: 5px;
+    background: #5f075f;
 }
 
 button:focus {
-  outline: none;
+    outline: none;
 }
 
 button:hover {
-  font-weight: bold;
-  color: #76FF0F;
-  box-shadow: 5px 5px 5px black;
+    font-weight: bold;
+
+    color: #76ff0f;
+    box-shadow: 5px 5px 5px black;
 }
 
 button:active {
+    font-weight: bold;
+
     color: #76bd0f;
-  font-weight: bold;
-  box-shadow: none;
+    box-shadow: none;
 }
 
 #room-button {
-    margin-top: 150px;
-    margin-left: 32px;
     position: fixed;
     left: 0;
+
+    margin-top: 150px;
+    margin-left: 32px;
 }
 
 header {
-
-    width: 215px;
     position: fixed;
 
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    width: 215px;
     margin-bottom: 10px;
 
     background-color: #555;
@@ -119,14 +134,11 @@ header {
 header img {
     width: 175px;
     margin-top: 15px;
-
 }
 
-#room-list{
+#room-list {
     margin-top: 220px;
 }
-
-
 
 #room-list li {
     font-family: 'Audiowide', cursive;
@@ -156,14 +168,13 @@ footer {
 
     width: 170px;
     margin: 1px;
+    padding-top: 5px;
 
     text-align: center;
+    /* border: thin solid #76ff0f; */
 
- /* border: thin solid #76ff0f; */
     border-radius: 5px;
-    background-color: rgba(249, 249, 183, 0.35);
-
-    padding-top: 5px;
+    background-color: rgba(235, 235, 235, .35);
 }
 
 
@@ -175,11 +186,6 @@ footer li img {
     width: 25px;
     padding: 0 3px;
 }
-
-
-
-
-
 
 
 
