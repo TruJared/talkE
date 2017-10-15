@@ -5,7 +5,10 @@ font-family: 'Exo 2', sans-serif;
 
 */
 
+
 /****** TO Do ******/
+
+
 /*
 
 better organization
@@ -13,9 +16,9 @@ better organization
 remove duplicate code
 
 */
+
+
 /**********************/
-
-
 
 * {
     margin: 0;
@@ -114,10 +117,11 @@ button:active {
 button[disabled],
 button:focus[disabled],
 button:hover[disabled],
-button:active[disabled]  {
+button:active[disabled] {
     cursor: default;
-    background-color: #444;
+
     color: #555;
+    background-color: #444;
     box-shadow: none;
 }
 
@@ -132,12 +136,11 @@ button:active[disabled]  {
 .main-header {
     position: fixed;
 
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-
     width: 215px;
     height: 220px;
 
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
     background-color: #555;
 }
 
@@ -198,27 +201,33 @@ footer li img {
     padding: 0 3px;
 }
 
+
 /****** MODAL STYLE ******/
 
-.modal-sm {  /* overrides default behavior to keep modal from expanding */
+.modal-sm {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    /* overrides default behavior to keep modal from expanding */
+
     width: 350px;
     height: 400px;
-    position: fixed;
-    left: 50%;
-    top: 5%;
-    margin-left: -125px;
     margin-right: -200px;
+    margin-left: -175px;
 }
 
 .modal-header {
     font-family: 'Audiowide', cursive;
+
     text-align: center;
+
     border-bottom-color: #76bd0f;
 }
 
 .modal-body {
     font-size: 16px;
 
+    margin-bottom: -15px;
 }
 
 .modal-content {
@@ -226,22 +235,14 @@ footer li img {
 }
 
 
-.modal-list li{
-    list-style: none;
-    pointer: default;
-    cursor: default;
-}
-
 .modal-button {
     font-size: 20px;
     font-weight: bold;
 
-    width: 85px;
-    padding: 5px;
-
+    width: 47%;
     margin-bottom: 5px;
     margin-left: 5px;
-
+    padding: 5px;
 
     cursor: pointer;
     cursor: hand;
@@ -259,34 +260,36 @@ footer li img {
 
 .modal-button:hover {
     font-weight: bold;
-    background: #5f075f;
+
     color: #76ff0f;
+    background: #5f075f;
     box-shadow: 5px 5px 5px black;
 }
 
 .modal-button:active {
     font-weight: bold;
-    background: #5f075f;
+
     color: #76bd0f;
+    background: #5f075f;
     box-shadow: none;
 }
 
 .modal-input {
+    font-size: 18px;
 
+    width: 100%;
+    margin-bottom: 15px;
     padding: 5px;
+
     border: thin solid #76bd0f;
 }
 
-.modal-footer p {
-    clear: both;
-    float: left;
+.modal-footer {
+    text-align: left;
+    /*    clear: both;
+    float: left;*/
 }
 
-.modal-warning{
-
-    font-weight: bold;
-    color: #AAA;
-}
 
 
 

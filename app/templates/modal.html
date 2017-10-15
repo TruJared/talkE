@@ -2,20 +2,13 @@
     <h3 class="modal-title" id="modal-title">Enter Room Name</h3>
 </div>
 <div class="modal-body" id="modal-body">
-    <ul class="modal-list">
-        <ul ng-repeat="rule in modal.rules">
-            <li>{{ rule }}</li>
-
-        </ul>
-    </ul>
     <input class="modal-input" type="text" id="input" ng-model="modal.newRoom" ng-minlength="modal.minChar" ng-maxlength="modal.maxChar" placeholder="Name Your Room">
-
+    <p>Room must be 3 to 10 characters in length.</p>
+    <p>Room's can not be duplicate names.</p>
+    <!-- room validation -->
+    <p class="modal-warning alert alert-info" ng-hide="modal.newRoom" >Invalid Room Name</p>
 </div>
 <div class="modal-footer">
-
-    <!-- room validation; works along with ng-minLength and ng-maxLength -->
-    <p class="modal-warning" ng-hide="modal.newRoom">Invalid Name</p>
-    <p ng-hide="!modal.newRoom">{{ modal.newRoom }}</p>
     <button class="modal-button" type="button" ng-disabled="!modal.newRoom" ng-click="modal.ok()">Confirm</button>
     <button class="modal-button" type="button" ng-click="modal.cancel() ">Cancel</button>
 </div>

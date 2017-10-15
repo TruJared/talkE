@@ -1,31 +1,32 @@
 (function() {
-    function ModalCtrl(Room, $uibModalInstance) {
-        this.newRoom = '';
+    function ModalCtrl(Room, $uibModalInstance, $filter, $timeout) {
+        this.newRoom = null;
+        this.roomsList = Room.all;
         this.minChar = 3;
         this.maxChar = 10;
 
-
-
-        this.rules = {
-            ruleOne: 'Room must be 3 to 10 characters in length.',
-            //ruleTwo: 'Room can not be a duplicate name. (not currently implemented).'      ?????how to implement?????//
-        };
-
-
+        // check if newRoom in roomsList else add newRoom
         this.ok = function(newRoom) {
-            $uibModalInstance.close(Room.add(this.newRoom));
-        };
 
+            this.newRoomLower = $filter('lowercase')(this.newRoom);
+            for (i = 0; i < this.roomsList.length; i++) {
+
+                if (this.newRoomLower === this.roomsList[i].$value) {
+                    return this.newRoom = null;
+
+                }
+            }
+
+            $uibModalInstance.close(Room.add(this.newRoomLower));
+        };
+        // cancel Modal don't add new room
         this.cancel = function() {
             $uibModalInstance.close();
         };
 
-
     }
-
-
 
     angular
         .module('talke')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
+        .controller('ModalCtrl', ['Room', '$uibModalInstance', '$filter', '$timeout', ModalCtrl]);
 })();
