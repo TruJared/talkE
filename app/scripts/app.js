@@ -18,6 +18,6 @@
 
 
     angular
-        .module('talke', ['ui.router', 'ui.bootstrap', 'firebase'])
+        .module('talke', ['ui.router', 'ui.bootstrap', 'firebase', 'ngCookies'])
         .config(config);
 })();
