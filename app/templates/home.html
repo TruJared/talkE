@@ -5,7 +5,7 @@
     <button id="room-button" type="button" ng-click="home.addRoom()">Add Room</button>
     <div id="room-list">
         <ul ng-repeat="room in home.roomsList">
-            <li><a href="#" ng-click="home.setRoom(room)">{{ room.$value }}</a></li>
+            <li><a href="#{{room.$value}}" ng-click="home.setRoom(room)">{{ room.$value }}</a></li>
         </ul>
     </div>
 </aside>
@@ -13,32 +13,24 @@
     <div class="message-header">
         <h1 class="room-title">{{home.currentRoom}}</h1>
     </div>
-    <div class="message-body-container">
-        <div class="message-container">
-            <div class="user-name">User Name</div>
-                        <div class="time-stamp">At 11:30pm</div>
-            <div class="message-box">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+    <div class="message-body-container" >
+        <div class="message-container" ng-repeat="message in home.messageList" >
+            <div class="user-name">{{message.username}}</div>
+                        <div class="message-box">{{message.message}}
+                            <div class="time-stamp">at: {{message.timestamp}}</div><br>
+                <a href="#" class="message-reply" ng-click="">reply</a>
+
             </div>
-
         </div>
-        <div class="message-container">
-            <div class="user-name">Different Name</div>
-            <div class="time-stamp">At 12:30am</div>
-            <div class="message-box">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
 
-        </div>
     </div>
 </article>
-<div id="footer-wrapper">
-    <footer>
-        <ul>
-            <!-- https://www.iconfinder.com/iconsets/typicons-2 -->
-            <li><a href="https://facebook.com/jerryrad" target="_blank"><img src="/assets/images/facebook.png" alt="facebook footer icon"></a></li>
-            <li><a href="https://twitter.com/trujared" target="_blank"><img src="/assets/images/twitter.png" alt="twitter footer icon"></a></li>
-            <li><a href="https://github.com/trujared" target="_blank"><img src="/assets/images/github.png" alt="github footer icon"></a></li>
-            <li><a href="http://trujared.com" target="_blank"><img src="/assets/images/globe.png" alt="globe footer icon"></a></li>
-        </ul>
-    </footer>
-</div>
+<footer>
+    <ul>
+        <!-- https://www.iconfinder.com/iconsets/typicons-2 -->
+        <li><a href="https://facebook.com/jerryrad" target="_blank"><img src="/assets/images/facebook.png" alt="facebook footer icon"></a></li>
+        <li><a href="https://twitter.com/trujared" target="_blank"><img src="/assets/images/twitter.png" alt="twitter footer icon"></a></li>
+        <li><a href="https://github.com/trujared" target="_blank"><img src="/assets/images/github.png" alt="github footer icon"></a></li>
+        <li><a href="http://trujared.com" target="_blank"><img src="/assets/images/globe.png" alt="globe footer icon"></a></li>
+    </ul>
+</footer>

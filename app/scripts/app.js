@@ -18,6 +18,6 @@
 
 
     angular
-        .module('talke', ['ui.router', 'ui.bootstrap', 'firebase', 'ngSanitize'])
+        .module('talke', ['ui.router', 'ui.bootstrap', 'firebase'])
         .config(config);
 })();

@@ -1,12 +1,11 @@
 (function() {
-    function HomeCtrl(Room, $uibModal, $filter) {
+    function HomeCtrl(Room, Message, $uibModal, $filter) {
         this.roomsList = Room.all;
-        this.currentRoom = 'DEFAULT';
-
+        this.messageList = 'null';
 
         // loads ng UI library and modal controller -- used to add rooms
         this.addRoom = function() {
-            $uibModal.open ({
+            $uibModal.open({
                 templateUrl: '/templates/modal.html',
                 size: 'sm',
                 controller: 'ModalCtrl as modal',
@@ -16,13 +15,16 @@
 
         // set currentRoom load room messages
         this.setRoom = function(room) {
-            room = $filter('uppercase')(room.$value);
-            this.currentRoom = room;
+            this.currentRoom = $filter('uppercase')(room.$value);
+
+            this.messageList = Message.getByRoomId(room.$id);
+
+
         };
 
     }
 
     angular
         .module('talke')
-        .controller('HomeCtrl', ['Room', '$uibModal', '$filter', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', '$filter', HomeCtrl]);
 })();

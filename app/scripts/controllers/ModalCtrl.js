@@ -12,7 +12,7 @@
             for (i = 0; i < this.roomsList.length; i++) {
 
                 if (this.newRoomLower === this.roomsList[i].$value) {
-                    return this.newRoom = null;
+                    return;
 
                 }
             }

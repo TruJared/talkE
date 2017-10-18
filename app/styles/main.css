@@ -42,30 +42,50 @@ body {
 }
 
 a {
+    /* gives load-in effect*/
+    animation-name: flash;
+    animation-duration: 1.5s;
+    animation-play-state: running;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
     text-decoration: none !important;
 
     color: #76bd0f !important;
 }
+
+@keyframes flash {
+
+    from {
+        color: #555;
+        color: rgba(118, 189, 15, .01);
+
+    }
+    to {
+        color: #76bd0f;
+        color: rgba(118, 189, 15, 1);
+    }
+}
+
 
 a:hover {
     text-shadow: 5px 5px 5px black;
 }
 
 h1 {
-    margin-top: 10px; /*override default*/
+    margin-top: 10px;
+    /*override default*/
 }
 
 aside {
     position: fixed;
-    top: 0;
     z-index: 1;
+    top: 0;
 
     overflow-x: hidden;
     overflow-y: auto;
 
     width: 215px;
     height: 100%;
-
 
     text-align: center;
 
@@ -164,21 +184,10 @@ button:active[disabled] {
     padding: 2px;
 
     list-style: none;
-
-    color: #76bd0f;
 }
 
 
-/*#footer-wrapper {
-    position: fixed;
-    bottom: 0;
 
-    width: 100%;
-    height: 5px;
-
-    background-color: white;
-}
-*/
 
 footer {
     position: fixed;
@@ -186,11 +195,10 @@ footer {
     bottom: 0;
 
     width: 170px;
-
     padding-top: 5px;
 
     text-align: center;
-    /* border: thin solid #76ff0f; */
+
     border-radius: 5px;
     background-color: rgba(235, 235, 235, .35);
 }
@@ -214,6 +222,7 @@ footer li img {
     top: 5%;
     left: 50%;
     /* overrides default behavior to keep modal from expanding */
+
     width: 350px;
     height: 400px;
     margin-right: -200px;
@@ -295,6 +304,7 @@ footer li img {
 }
 
 
+
 /****** MESSAGE STYLE ******/
 
 .room-title {
@@ -302,39 +312,63 @@ footer li img {
 }
 
 .message-header {
-    width: 100%;
-    background-color: white;
+    font-family: 'Audiowide', cursive;
+
     position: fixed;
     top: 0;
-    font-family: 'Audiowide', cursive;
-    color: #76bd0f;
 
+    width: 80%;
+
+    color: #76bd0f;
+    background-color: white;
 }
 
 .message-body-container {
-    margin-top: 70px;
+    margin-top: 55px;
 }
 
 .user-name {
+    font-size: 20px;
+    font-weight: bold;
 
-    font-size: 22px;
-    color: #69C;
     float: left;
+
+    margin-top: 22px;
     margin-right: 10px;
+
+    color: #69c;
+    text-shadow: 1px 1px 2px lime;
 }
 
 .time-stamp {
-
-    padding-top: 7px;
-    color: #AAA;
     font-size: 14px;
 
+    display: inline-block;
+
+    margin-left: 10px;
+
+    color: #aaa;
 }
 
 .message-box {
     clear: both;
+
+    width: 95%;
     padding: 5px;
+
+    border-bottom: thin solid #5f075f;
 }
+
+.message-reply {
+    font-size: 16px;
+
+    margin-left: 5px;
+}
+
+.message-reply:hover {
+    text-shadow: none;
+}
+
 
 
 
