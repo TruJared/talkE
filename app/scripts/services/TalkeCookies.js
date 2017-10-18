@@ -1,6 +1,6 @@
 (function() {
   function TalkeCookies($cookies, $uibModal) {
-    var currentUser = $cookies.get('TalkeCurrentUser');
+    var currentUser = 'Cookie-jared' //$cookies.get('TalkeCurrentUser');
     if (!currentUser || currentUser === '') {
             $uibModal.open({
                 templateUrl: '/templates/login.html',

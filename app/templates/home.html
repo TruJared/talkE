@@ -17,13 +17,14 @@
         <div class="message-container" ng-repeat="message in home.messageList" >
             <div class="user-name">{{message.username}}</div>
                         <div class="message-box">{{message.message}}
-                            <div class="time-stamp">at: {{message.timestamp}}</div><br>
-                <a href="#" class="message-reply" ng-click="">reply</a>
-
+<!--                             <div class="time-stamp">at: {{message.timestamp}}</div> --><br>
             </div>
         </div>
 
-    </div>
+    <form class="chat-form" ng-hide="!home.currentRoom">
+        <input class="modal-input" type="text" placeholder="Enter your reply" ng-model="chatMessage">
+        <button class="btn-sm chat-button" type="submit" ng-disabled="!chatMessage" ng-click="home.reply(chatMessage)">CHAT</button>
+    </form>
 </article>
 <footer>
     <ul>
