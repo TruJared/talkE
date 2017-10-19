@@ -1,5 +1,6 @@
 (function() {
     function Message($firebaseArray, Room) {
+        this.chatMessage = null;
         var Message = {};
         var ref = firebase.database().ref().child("messages");
         var messages = $firebaseArray(ref);
@@ -15,9 +16,10 @@
         };
 
             Message.send = function(newMessage) {
-                // Send method logic
 
                 messages.$add(newMessage);
+
+
     };
 
         return Message;

@@ -186,6 +186,11 @@ button:active[disabled] {
     list-style: none;
 }
 
+.form-container{
+    padding-top: 25px;
+    width: 72%;
+}
+
 
 
 

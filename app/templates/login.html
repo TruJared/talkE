@@ -2,14 +2,14 @@
     <h3 class="modal-title" id="modal-title">Welcome To Talke</h3>
 </div>
 <div class="modal-body" id="modal-body">
-    <input class="modal-input" type="text" id="input" ng-model="modal.userName" ng-minlength=3 ng-maxlength=15 placeholder="Enter Your User Name">
+    <input class="modal-input" type="text" id="input" ng-model="login.userName" ng-minlength=3 ng-maxlength=15 placeholder="Enter Your User Name">
 
     <p>Must be 3 to 15 characters in length.</p>
 
     <!-- room validation -->
-    <p class="modal-warning alert alert-info" ng-hide="modal.userName" >Invalid Name</p>
+    <p class="modal-warning alert alert-info" ng-hide="login.userName" >Invalid Name</p>
 </div>
 <div class="modal-footer">
-    <button class="modal-button" type="button" ng-disabled="!modal.userName" ng-click="modal.ok()">Confirm</button>
+    <button class="modal-button" type="button" ng-disabled="!login.userName" ng-click="modal.loginok(login.userName)">Confirm</button>
     <button class="modal-button" type="button" ng-disabled=true ng-click="modal.cancel() ">Cancel</button>
 </div>

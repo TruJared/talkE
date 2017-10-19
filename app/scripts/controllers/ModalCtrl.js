@@ -1,5 +1,5 @@
 (function() {
-    function ModalCtrl(Room, $uibModalInstance, $filter, $timeout) {
+    function ModalCtrl(Room, $uibModalInstance, $filter, $timeout, $cookies) {
         this.newRoom = null;
         this.roomsList = Room.all;
         this.minChar = 3;
@@ -24,9 +24,15 @@
             $uibModalInstance.close();
         };
 
+        this.loginok = function(username){
+                        $cookies.put('TalkeUser', username);
+            $uibModalInstance.close();
+        };
+
+
     }
 
     angular
         .module('talke')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', '$filter', '$timeout', ModalCtrl]);
+        .controller('ModalCtrl', ['Room', '$uibModalInstance', '$filter', '$timeout', '$cookies', ModalCtrl]);
 })();

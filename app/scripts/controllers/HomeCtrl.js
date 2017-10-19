@@ -2,10 +2,7 @@
     function HomeCtrl(Room, Message, $uibModal, $filter, $cookies) {
         this.roomsList = Room.all;
         this.messageList = null;
-        this.currentUser = 'Cookie-Jared' //$cookies.get('TalkeCurrentUser');
-
-
-        this.currentRoom = null,
+        this.currentRoom = null;
         this.currentRoomId = null;
 
         // loads ng UI library and modal controller -- used to add rooms
@@ -14,6 +11,8 @@
                 templateUrl: '/templates/modal.html',
                 size: 'sm',
                 controller: 'ModalCtrl as modal',
+                keyboard: true,
+                backdrop: 'static'
 
             });
         };
@@ -38,14 +37,13 @@
             var chatMessageBundle = {
                 "roomId": this.currentRoomId,
                 "message": chatMessage,
-                "username": this.currentUser
+                "username": $cookies.get('TalkeUser')
             };
-
 
             Message.send(chatMessageBundle);
 
-
-
+            // Clear input
+            document.getElementById('modal-input').value = '';
 
         }
 
