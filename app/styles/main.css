@@ -1,24 +1,9 @@
-/* fonts
+    /* fonts
 
 font-family: 'Audiowide', cursive;
 font-family: 'Exo 2', sans-serif;
 
 */
-
-
-/****** TO Do ******/
-
-
-/*
-
-better organization
-
-remove duplicate code
-
-*/
-
-
-/**********************/
 
 * {
     margin: 0;
@@ -34,6 +19,8 @@ body {
     height: 100%;
 
     color: #212121;
+
+    padding: 1px;
 }
 
 
@@ -58,7 +45,6 @@ a {
     from {
         color: #555;
         color: rgba(118, 189, 15, .01);
-
     }
     to {
         color: #76bd0f;
@@ -77,6 +63,8 @@ h1 {
 }
 
 aside {
+
+    background-color: white;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -84,24 +72,29 @@ aside {
     overflow-x: hidden;
     overflow-y: auto;
 
-    width: 215px;
-    height: 100%;
-
     text-align: center;
 
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    background-color: #555;
-    box-shadow: 3px 0 5px;
+
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+
+    height: 50px;
+    float: left;
+    width: 99%;
 }
+
 
 aside div {
     margin-bottom: 50px;
 }
 
 article {
-    margin: 10px 10px 40px 230px;
+    margin: 10px;
 }
+
+
 
 button {
     font-size: 20px;
@@ -149,31 +142,17 @@ button:active[disabled] {
 }
 
 #room-button {
-    position: fixed;
-    left: 0;
 
-    margin-top: 160px;
-    margin-left: 32px;
+    visibility: hidden;
 }
 
 .main-header {
-    position: fixed;
 
-    width: 215px;
-    height: 220px;
-
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    background-color: #555;
+    visibility: hidden;
 }
 
 .main-header img {
-    width: 175px;
-    margin-top: 15px;
-}
-
-#room-list {
-    margin-top: 225px;
+    visibility: hidden;
 }
 
 
@@ -186,12 +165,10 @@ button:active[disabled] {
     list-style: none;
 }
 
-.form-container{
+.form-container {
     padding-top: 25px;
     width: 72%;
 }
-
-
 
 
 footer {
@@ -219,7 +196,6 @@ footer li img {
 }
 
 
-
 /****** MODAL STYLE ******/
 
 .modal-sm {
@@ -227,7 +203,6 @@ footer li img {
     top: 5%;
     left: 50%;
     /* overrides default behavior to keep modal from expanding */
-
     width: 350px;
     height: 400px;
     margin-right: -200px;
@@ -304,8 +279,6 @@ footer li img {
 
 .modal-footer {
     text-align: left;
-    /*    clear: both;
-    float: left;*/
 }
 
 
@@ -313,23 +286,31 @@ footer li img {
 /****** MESSAGE STYLE ******/
 
 .room-title {
-    border-bottom: thin solid #5f075f;
+
+    padding-bottom: 5px;
 }
 
 .message-header {
-    font-family: 'Audiowide', cursive;
+
 
     position: fixed;
     top: 0;
 
-    width: 80%;
+
+    font-family: 'Audiowide', cursive;
+
+
 
     color: #76bd0f;
     background-color: white;
+
+    width: 100%;
+    border-bottom: thin solid orange;
+    box-shadow: 2px 2px 3px black;
 }
 
 .message-body-container {
-    margin-top: 55px;
+    margin: 50px 10px 40px;
 }
 
 .user-name {
@@ -345,20 +326,10 @@ footer li img {
     text-shadow: 1px 1px 2px lime;
 }
 
-.time-stamp {
-    font-size: 14px;
-
-    display: inline-block;
-
-    margin-left: 10px;
-
-    color: #aaa;
-}
-
 .message-box {
     clear: both;
 
-    width: 95%;
+    width: 100%;
     padding: 5px;
 
     border-bottom: thin solid #5f075f;
@@ -374,13 +345,80 @@ footer li img {
     text-shadow: none;
 }
 
-
-
+.reply-input {
+    width: 95%;
+}
 
 /****** media queries ******/
 
+@media screen and (min-width: 800px) {
 
-/* make room menus hidden in a menu?? */
+    aside {
+        height: 100%;
+        width: 215px;
+        box-shadow: 3px 0 5px;
 
 
-/* or switch it to take up the top 15% of screen?? */
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+        background-color: #555;
+
+        margin-left: -2px;
+    }
+
+    .aside-small {
+        visibility: hidden;
+    }
+
+    article {
+        margin: 25px 10px 40px 230px;
+    }
+
+    .main-header {
+        visibility: visible;
+        position: fixed;
+        top: 0;
+
+
+        width: 215px;
+        height: 220px;
+
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background-color: #555;
+    }
+
+    .main-header img {
+        visibility: visible;
+        width: 175px;
+        margin-top: 15px;
+    }
+
+    #room-list {
+        margin-top: 225px;
+    }
+
+    #room-button {
+        visibility: visible;
+        position: fixed;
+        left: 0;
+
+        margin-top: 160px;
+        margin-left: 32px;
+    }
+
+    .form-container {
+        padding-top: 25px;
+        width: 82%;
+    }
+
+    .message-header {
+
+        margin-left: -35px;
+    }
+
+    .room-title {
+        margin-left: 65px;
+    }
+}

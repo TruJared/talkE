@@ -8,7 +8,6 @@
         Message.all = messages;
 
 
-
         Message.getByRoomId = function(roomId) {
             // Filter the messages by their room ID.
 
@@ -18,8 +17,6 @@
             Message.send = function(newMessage) {
 
                 messages.$add(newMessage);
-
-
     };
 
         return Message;

@@ -10,8 +10,11 @@
 
         rooms.$add(room);
 
-
     };
+
+    Room.setRoom = function(room){
+
+    }
 
     return Room;
   }

@@ -18,14 +18,16 @@
             }
 
             $uibModalInstance.close(Room.add(this.newRoomLower));
+
         };
+
         // cancel Modal don't add new room
         this.cancel = function() {
             $uibModalInstance.close();
         };
 
-        this.loginok = function(username){
-                        $cookies.put('TalkeUser', username);
+        this.loginok = function(username) {
+            $cookies.put('TalkeUser', username);
             $uibModalInstance.close();
         };
 

@@ -1,8 +1,9 @@
 (function() {
     function HomeCtrl(Room, Message, $uibModal, $filter, $cookies) {
+
         this.roomsList = Room.all;
         this.messageList = null;
-        this.currentRoom = null;
+        this.currentRoom = 'pick a room';
         this.currentRoomId = null;
 
         // loads ng UI library and modal controller -- used to add rooms
@@ -24,16 +25,18 @@
             this.currentRoom = $filter('uppercase')(room.$value);
 
             //set currentRoomId for reply function
-            this.currentRoomId = room.$id
+            this.currentRoomId = room.$id;
 
             // get data from room to popualte chat box
             this.messageList = Message.getByRoomId(room.$id);
 
-
-
         };
 
+        // chat message replies
+
         this.reply = function(chatMessage) {
+
+            // creates object to properly enter info into database
             var chatMessageBundle = {
                 "roomId": this.currentRoomId,
                 "message": chatMessage,
@@ -45,7 +48,7 @@
             // Clear input
             document.getElementById('modal-input').value = '';
 
-        }
+        };
 
     }
 
