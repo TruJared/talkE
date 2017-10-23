@@ -20,7 +20,7 @@ body {
 
     color: #212121;
 
-    padding: 1px;
+
 }
 
 
@@ -80,9 +80,9 @@ aside {
     -o-transition: 0.5s linear all;
     transition: 0.5s linear all;
 
-    height: 50px;
+    height: 0;
     float: left;
-    width: 99%;
+    width: 100%;
 }
 
 
@@ -146,17 +146,45 @@ button:active[disabled] {
     visibility: hidden;
 }
 
+
+
 .main-header {
 
     visibility: hidden;
+
 }
 
 .main-header img {
     visibility: hidden;
+
+
 }
 
 
-#room-list li {
+#room-list-menu {
+  display: block;
+  position: fixed;
+  margin-top: 15px;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgb(85, 85, 85);
+
+  background-color: rgba(85, 85, 85, .75);
+
+  border: thin ;
+  border-radius: 5px;
+
+
+}
+
+.room-list {
+    margin-top: 225px;
+}
+
+
+.room-list li {
     font-family: 'Audiowide', cursive;
     font-size: 28px;
 
@@ -359,15 +387,13 @@ footer li img {
         box-shadow: 3px 0 5px;
 
 
-        border-top-right-radius: 25px;
-        border-bottom-right-radius: 25px;
 
         background-color: #555;
 
         margin-left: -2px;
     }
 
-    .aside-small {
+    #aside-small {
         visibility: hidden;
     }
 

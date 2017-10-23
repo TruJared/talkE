@@ -1,12 +1,18 @@
 <aside class="aside">
-    <div class="aside-small message-header room-title">
+    <div id="aside-small" class="message-header room-title" ng-click="home.menuToggle()"> <!-- can be done better with ng-toggle -->
         <h1>{{home.currentRoom}}</h1>
+            <div id="room-list-menu" class="room-list">
+        <ul ng-repeat="room in home.roomsList">
+            <li><a href="#{{room.$value}}" ng-click="home.setRoom(room)">{{ room.$value }}</a></li>
+        </ul>
+    </div>
+
     </div>
     <!-- https://logomakr.com/ -->
     <header class="main-header"><img src=/assets/images/talke-logo.png alt="talke logo"></header>
     <!-- launch modal -->
     <button id="room-button" type="button" ng-click="home.addRoom()">Add Room</button>
-    <div id="room-list">
+    <div class="room-list">
         <ul ng-repeat="room in home.roomsList">
             <li><a href="#{{room.$value}}" ng-click="home.setRoom(room)">{{ room.$value }}</a></li>
         </ul>

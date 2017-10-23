@@ -50,6 +50,21 @@
 
         };
 
+        //needs to be converted to angular using ng-toggle
+
+        var sidebar = document.getElementById("aside-small");
+        var toggler = document.getElementById("room-list-menu");
+
+        this.menuToggle = function() {
+
+            if (toggler.style.display === "none") {
+                return (toggler.style.display = "block");
+            }
+
+            toggler.style.display = "none";
+        };
+
+
     }
 
     angular
