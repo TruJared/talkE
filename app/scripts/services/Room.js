@@ -8,13 +8,9 @@
 
     Room.add = function(room) {
 
-        rooms.$add(room);
-
     };
 
-    Room.setRoom = function(room){
 
-    }
 
     return Room;
   }

@@ -3,13 +3,14 @@
 </div>
 <div class="modal-body" id="modal-body">
     <input class="modal-input" type="text" id="input" ng-model="login.userName" ng-minlength=3 ng-maxlength=15 placeholder="Enter Your User Name">
+    <input class="modal-input" type="password" id="password-input" ng-model="login.password" placeholder="Enter Password">
+    <p>Name must be 3 to 15 characters in length.</p>
 
-    <p>Must be 3 to 15 characters in length.</p>
 
-    <!-- room validation -->
+    <!-- name validation -->
     <p class="modal-warning alert alert-info" ng-hide="login.userName" >Invalid Name</p>
 </div>
 <div class="modal-footer">
-    <button class="modal-button" type="button" ng-disabled="!login.userName" ng-click="modal.loginok(login.userName)">Confirm</button>
+    <button class="modal-button" type="button" ng-disabled="!login.userName || login.password !== '{Angular4Jared}'" ng-click="modal.loginok(login.userName)">Confirm</button>
     <button class="modal-button" type="button" ng-disabled=true ng-click="modal.cancel() ">Cancel</button>
 </div>

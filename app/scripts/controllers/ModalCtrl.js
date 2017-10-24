@@ -1,9 +1,10 @@
 (function() {
-    function ModalCtrl(Room, $uibModalInstance, $filter, $timeout, $cookies) {
+    function ModalCtrl(Room, $uibModalInstance, $filter, $timeout, $cookies, $firebaseArray) {
         this.newRoom = null;
         this.roomsList = Room.all;
         this.minChar = 3;
         this.maxChar = 10;
+
 
         // check if newRoom in roomsList else add newRoom
         this.ok = function(newRoom) {
@@ -26,6 +27,7 @@
             $uibModalInstance.close();
         };
 
+
         this.loginok = function(username) {
             $cookies.put('TalkeUser', username);
             $uibModalInstance.close();
@@ -36,5 +38,5 @@
 
     angular
         .module('talke')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', '$filter', '$timeout', '$cookies', ModalCtrl]);
+        .controller('ModalCtrl', ['Room', '$uibModalInstance', '$filter', '$timeout', '$cookies', '$firebaseArray', ModalCtrl]);
 })();

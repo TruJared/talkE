@@ -3,7 +3,7 @@
 
         this.roomsList = Room.all;
         this.messageList = null;
-        this.currentRoom = 'pick a room';
+        this.currentRoom = 'select a room';
         this.currentRoomId = null;
 
         // loads ng UI library and modal controller -- used to add rooms
@@ -51,7 +51,7 @@
         };
 
         //needs to be converted to angular using ng-toggle
-
+        //controls aside
         var sidebar = document.getElementById("aside-small");
         var toggler = document.getElementById("room-list-menu");
 
