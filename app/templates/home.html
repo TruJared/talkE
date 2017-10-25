@@ -1,23 +1,21 @@
-<aside class="aside">
-    <div id="aside-small" class="message-header room-title" ng-click="home.menuToggle()">
-        <h1>{{home.currentRoom}}</h1>
-        <div id="room-list-menu" class="room-list">
+
+    <aside id="aside-normal" class="aside">
+
+            <h1>Welcome To Talke</h1>
+
+
+        <!-- https://logomakr.com/ -->
+        <header class="main-header"><img src=/assets/images/talke-logo.png alt="talke logo"></header>
+        <!-- launch modal -->
+        <button id="room-button" type="button" ng-click="home.addRoom()">Add Room</button>
+        <div id="room-list" class="room-list">
             <ul ng-repeat="room in home.roomsList">
                 <li><a href="#{{room.$value}}" ng-click="home.setRoom(room)">{{ room.$value }}</a></li>
             </ul>
         </div>
-    </div>
-    <!-- https://logomakr.com/ -->
-    <header class="main-header"><img src=/assets/images/talke-logo.png alt="talke logo"></header>
-    <!-- launch modal -->
-    <button id="room-button" type="button" ng-click="home.addRoom()">Add Room</button>
-    <div class="room-list">
-        <ul ng-repeat="room in home.roomsList">
-            <li><a href="#{{room.$value}}" ng-click="home.setRoom(room)">{{ room.$value }}</a></li>
-        </ul>
-    </div>
-</aside>
-<article>
+    </aside>
+
+<article id="article-normal">
     <div class="message-header">
         <h1 class="room-title">{{home.currentRoom}}</h1>
     </div>
@@ -38,7 +36,7 @@
 </article>
 <div class="footer-wrapper">
     <footer>
-        <button id="room-menu-button" type="button" ng-click="home.menuToggle()">View Rooms</button>
+        <button id="room-menu-button" type="button" ng-click="home.menuToggle()">Toggle Rooms</button>
         <ul>
             <!-- https://www.iconfinder.com/iconsets/typicons-2 -->
             <li><a href="https://facebook.com/jerryrad" target="_blank"><img src="/assets/images/facebook.png" alt="facebook footer icon"></a></li>

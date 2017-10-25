@@ -6,6 +6,10 @@
         this.currentRoom = 'select a room';
         this.currentRoomId = null;
 
+        // for toggle function
+        var sidebar = document.getElementById("aside-normal");
+        var article = document.getElementById("article-normal");
+
         // loads ng UI library and modal controller -- used to add rooms
         this.addRoom = function() {
             $uibModal.open({
@@ -30,6 +34,18 @@
             // get data from room to popualte chat box
             this.messageList = Message.getByRoomId(room.$id);
 
+            //close room list
+            if (sidebar.style.display === "none") {
+                sidebar.style.display = "block";
+                article.style.margin = "25px 0 40px 225px";
+                return;
+            }
+
+            sidebar.style.display = "none";
+            article.style.margin = "25px 0 40px 0";
+
+
+
         };
 
         // chat message replies
@@ -52,16 +68,19 @@
 
         //needs to be converted to angular using ng-toggle
         // controls aside
-        var sidebar = document.getElementById("aside-small");
-        var toggler = document.getElementById("room-list-menu");
+
 
         this.menuToggle = function() {
 
-            if (toggler.style.display === "none") {
-                return (toggler.style.display = "block");
+            if (sidebar.style.display === "none") {
+                sidebar.style.display = "block";
+                article.style.margin = "25px 0 40px 225px";
+                return;
             }
 
-            toggler.style.display = "none";
+            sidebar.style.display = "none";
+            article.style.margin = "25px 0 40px 0";
+
         };
 
 
