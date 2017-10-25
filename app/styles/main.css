@@ -1,10 +1,12 @@
-* {
+*
+{
     margin: 0;
     padding: 0;
 }
 
 html,
-body {
+body
+{
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
     line-height: 1.45;
@@ -12,16 +14,16 @@ body {
     height: 100%;
 
     color: #212121;
-
-
 }
 
 
-::-webkit-scrollbar {
+::-webkit-scrollbar
+{
     display: none;
 }
 
-a {
+a
+{
     /* gives load-in effect*/
     animation-name: flash;
     animation-duration: 1.5s;
@@ -33,63 +35,70 @@ a {
     color: #76bd0f !important;
 }
 
-@keyframes flash {
-
-    from {
+@keyframes flash
+{
+    from
+    {
         color: #555;
         color: rgba(118, 189, 15, .01);
     }
-    to {
+    to
+    {
         color: #76bd0f;
         color: rgba(118, 189, 15, 1);
     }
 }
 
 
-a:hover {
+a:hover
+{
     text-shadow: 5px 5px 5px black;
 }
 
-h1 {
+h1
+{
     margin-top: 10px;
     /*override default*/
 }
 
-aside {
-
-    background-color: white;
+aside
+{
     position: fixed;
     z-index: 1;
     top: 0;
 
+    visibility: visible;
+    float: left;
     overflow-x: hidden;
     overflow-y: auto;
 
+    width: 100%;
+    height: 0;
+
+    -webkit-transition: .5s linear all;
+       -moz-transition: .5s linear all;
+         -o-transition: .5s linear all;
+            transition: .5s linear all;
     text-align: center;
 
-
-    -webkit-transition: 0.5s linear all;
-    -moz-transition: 0.5s linear all;
-    -o-transition: 0.5s linear all;
-    transition: 0.5s linear all;
-
-    height: 0;
-    float: left;
-    width: 100%;
+    background-color: white;
 }
 
 
-aside div {
+aside div
+{
     margin-bottom: 50px;
 }
 
-article {
+article
+{
     margin: 10px;
 }
 
 
 
-button {
+button
+{
     font-size: 20px;
     font-weight: bold;
 
@@ -105,18 +114,21 @@ button {
     background: #5f075f;
 }
 
-button:focus {
+button:focus
+{
     outline: none;
 }
 
-button:hover {
+button:hover
+{
     font-weight: bold;
 
     color: #76ff0f;
     box-shadow: 5px 5px 5px black;
 }
 
-button:active {
+button:active
+{
     font-weight: bold;
 
     color: #76bd0f;
@@ -127,7 +139,8 @@ button[disabled],
 button:focus[disabled],
 button:hover[disabled],
 button:active[disabled],
-.btn-info[disabled]:hover {
+.btn-info[disabled]:hover
+{
     cursor: not-allowed;
 
     color: #555;
@@ -135,50 +148,59 @@ button:active[disabled],
     box-shadow: none;
 }
 
-#room-button {
+#room-button
+{
+    visibility: hidden;
+}
 
+#room-menu-button
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    height: 40px;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
+.main-header
+{
+    visibility: hidden;
+}
+
+.main-header img
+{
     visibility: hidden;
 }
 
 
+#room-list-menu
+{
+    position: fixed;
 
-.main-header {
+    display: block;
 
-    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
 
+    border: thin ;
+    border-radius: 5px;
+    background-color: rgb(85, 85, 85);
+    background-color: rgba(85, 85, 85, .75);
 }
 
-.main-header img {
-    visibility: hidden;
-
-
-}
-
-
-#room-list-menu {
-  display: block;
-  position: fixed;
-  margin-top: 10px;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: rgb(85, 85, 85);
-
-  background-color: rgba(85, 85, 85, .75);
-
-  border: thin ;
-  border-radius: 5px;
-
-
-}
-
-.room-list {
+.room-list
+{
     margin-top: 225px;
 }
 
 
-.room-list li {
+.room-list li
+{
     font-family: 'Audiowide', cursive;
     font-size: 28px;
 
@@ -187,51 +209,68 @@ button:active[disabled],
     list-style: none;
 }
 
-.form-container {
-    padding-top: 25px;
+.form-container
+{
     width: 72%;
+    padding-top: 25px;
+}
+.footer-wrapper
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    visibility: visible;
+
+    width: 100%;
+    height: 50px;
+
+    border: thin solid black;
+    background-color: rgb(85, 85, 85);
 }
 
 
-footer {
+footer
+{
     position: fixed;
     right: 0;
     bottom: 0;
 
     width: 170px;
-    padding-top: 5px;
 
     text-align: center;
-
-    border-radius: 5px;
-    background-color: rgba(235, 235, 235, .35);
 }
 
 
-footer li {
+footer li
+{
     display: inline-block;
 }
 
-footer li img {
-    width: 25px;
+footer li img
+{
+    width: 30px;
     padding: 0 3px;
 }
 
 
 /****** MODAL STYLE ******/
 
-.modal-sm {
+.modal-sm
+{
     position: fixed;
     top: 5%;
     left: 50%;
     /* overrides default behavior to keep modal from expanding */
+
     width: 350px;
     height: 400px;
     margin-right: -200px;
     margin-left: -175px;
 }
 
-.modal-header {
+.modal-header
+{
     font-family: 'Audiowide', cursive;
 
     text-align: center;
@@ -239,18 +278,21 @@ footer li img {
     border-bottom-color: #76bd0f;
 }
 
-.modal-body {
+.modal-body
+{
     font-size: 16px;
 
     margin-bottom: -15px;
 }
 
-.modal-content {
+.modal-content
+{
     padding: 5px 5px 0 5px;
 }
 
 
-.modal-button {
+.modal-button
+{
     font-size: 20px;
     font-weight: bold;
 
@@ -268,12 +310,14 @@ footer li img {
     background: #5f075f;
 }
 
-.modal-button:focus {
+.modal-button:focus
+{
     outline: none;
     background: #5f075f;
 }
 
-.modal-button:hover {
+.modal-button:hover
+{
     font-weight: bold;
 
     color: #76ff0f;
@@ -281,7 +325,8 @@ footer li img {
     box-shadow: 5px 5px 5px black;
 }
 
-.modal-button:active {
+.modal-button:active
+{
     font-weight: bold;
 
     color: #76bd0f;
@@ -289,7 +334,8 @@ footer li img {
     box-shadow: none;
 }
 
-.modal-input {
+.modal-input
+{
     font-size: 18px;
 
     width: 100%;
@@ -299,18 +345,19 @@ footer li img {
     border: thin solid #76bd0f;
 }
 
-.modal-footer {
+.modal-footer
+{
     text-align: left;
 }
 
-#modal-title {
+#modal-title
+{
     color: #69c;
     text-shadow: 1px 1px 2px lime;
-
 }
 
-#login-email:hover{
-
+#login-email:hover
+{
     text-shadow: none;
 }
 
@@ -318,35 +365,33 @@ footer li img {
 
 /****** MESSAGE STYLE ******/
 
-.room-title {
-
+.room-title
+{
     padding-bottom: 5px;
 }
 
-.message-header {
-
+.message-header
+{
+    font-family: 'Audiowide', cursive;
 
     position: fixed;
     top: 0;
 
-
-    font-family: 'Audiowide', cursive;
-
-
+    width: 100%;
 
     color: #76bd0f;
-    background-color: white;
-
-    width: 100%;
     border-bottom: thin solid orange;
+    background-color: white;
     box-shadow: 2px 2px 3px black;
 }
 
-.message-body-container {
-    margin: 50px 10px 40px;
+.message-body-container
+{
+    margin: 50px 10px 60px;
 }
 
-.user-name {
+.user-name
+{
     font-size: 20px;
     font-weight: bold;
 
@@ -359,7 +404,8 @@ footer li img {
     text-shadow: 1px 1px 2px lime;
 }
 
-.message-box {
+.message-box
+{
     clear: both;
 
     width: 100%;
@@ -368,49 +414,63 @@ footer li img {
     border-bottom: thin solid #5f075f;
 }
 
-.message-reply {
+.message-reply
+{
     font-size: 16px;
 
     margin-left: 5px;
 }
 
-.message-reply:hover {
+.message-reply:hover
+{
     text-shadow: none;
 }
 
-.reply-input {
+.reply-input
+{
     width: 95%;
 }
 
 /****** media queries ******/
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px)
+{
+    aside
+    {
+        visibility: visible;
 
-    aside {
-        height: 100%;
         width: 215px;
-        box-shadow: 3px 0 5px;
-
-
+        height: 100%;
+        margin-left: -2px;
 
         background-color: #555;
-
-        margin-left: -2px;
+        box-shadow: 3px 0 5px;
     }
 
-    #aside-small {
+    #aside-small
+    {
         visibility: hidden;
     }
 
-    article {
+    article
+    {
         margin: 25px 10px 40px 230px;
     }
 
-    .main-header {
-        visibility: visible;
+    .footer-wrapper
+    {
+        height: 0;
+
+        border: none;
+        background: white;
+    }
+
+    .main-header
+    {
         position: fixed;
         top: 0;
 
+        visibility: visible;
 
         width: 215px;
         height: 220px;
@@ -420,36 +480,43 @@ footer li img {
         background-color: #555;
     }
 
-    .main-header img {
+    .main-header img
+    {
         visibility: visible;
+
         width: 175px;
         margin-top: 15px;
     }
 
-    #room-list {
+    #room-list
+    {
         margin-top: 225px;
     }
 
-    #room-button {
-        visibility: visible;
+    #room-button
+    {
         position: fixed;
         left: 0;
+
+        visibility: visible;
 
         margin-top: 160px;
         margin-left: 32px;
     }
 
-    .form-container {
-        padding-top: 25px;
+    .form-container
+    {
         width: 82%;
+        padding-top: 25px;
     }
 
-    .message-header {
-
+    .message-header
+    {
         margin-left: -35px;
     }
 
-    .room-title {
+    .room-title
+    {
         margin-left: 65px;
     }
 }

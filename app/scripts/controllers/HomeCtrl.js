@@ -51,7 +51,7 @@
         };
 
         //needs to be converted to angular using ng-toggle
-        //controls aside
+        // controls aside
         var sidebar = document.getElementById("aside-small");
         var toggler = document.getElementById("room-list-menu");
 

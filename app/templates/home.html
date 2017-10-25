@@ -1,12 +1,11 @@
 <aside class="aside">
-    <div id="aside-small" class="message-header room-title" ng-click="home.menuToggle()"> <!-- can be done better with ng-toggle -->
+    <div id="aside-small" class="message-header room-title" ng-click="home.menuToggle()">
         <h1>{{home.currentRoom}}</h1>
-            <div id="room-list-menu" class="room-list">
-        <ul ng-repeat="room in home.roomsList">
-            <li><a href="#{{room.$value}}" ng-click="home.setRoom(room)">{{ room.$value }}</a></li>
-        </ul>
-    </div>
-
+        <div id="room-list-menu" class="room-list">
+            <ul ng-repeat="room in home.roomsList">
+                <li><a href="#{{room.$value}}" ng-click="home.setRoom(room)">{{ room.$value }}</a></li>
+            </ul>
+        </div>
     </div>
     <!-- https://logomakr.com/ -->
     <header class="main-header"><img src=/assets/images/talke-logo.png alt="talke logo"></header>
@@ -37,12 +36,15 @@
             </form>
         </div>
 </article>
-<footer>
-    <ul>
-        <!-- https://www.iconfinder.com/iconsets/typicons-2 -->
-        <li><a href="https://facebook.com/jerryrad" target="_blank"><img src="/assets/images/facebook.png" alt="facebook footer icon"></a></li>
-        <li><a href="https://twitter.com/trujared" target="_blank"><img src="/assets/images/twitter.png" alt="twitter footer icon"></a></li>
-        <li><a href="https://github.com/trujared" target="_blank"><img src="/assets/images/github.png" alt="github footer icon"></a></li>
-        <li><a href="http://trujared.com" target="_blank"><img src="/assets/images/globe.png" alt="globe footer icon"></a></li>
-    </ul>
-</footer>
+<div class="footer-wrapper">
+    <footer>
+        <button id="room-menu-button" type="button" ng-click="home.menuToggle()">View Rooms</button>
+        <ul>
+            <!-- https://www.iconfinder.com/iconsets/typicons-2 -->
+            <li><a href="https://facebook.com/jerryrad" target="_blank"><img src="/assets/images/facebook.png" alt="facebook footer icon"></a></li>
+            <li><a href="https://twitter.com/trujared" target="_blank"><img src="/assets/images/twitter.png" alt="twitter footer icon"></a></li>
+            <li><a href="https://github.com/trujared" target="_blank"><img src="/assets/images/github.png" alt="github footer icon"></a></li>
+            <li><a href="http://trujared.com" target="_blank"><img src="/assets/images/globe.png" alt="globe footer icon"></a></li>
+        </ul>
+    </footer>
+</div>
