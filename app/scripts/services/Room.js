@@ -8,6 +8,9 @@
 
     Room.add = function(room) {
 
+        rooms.$add(room);
+
+
     };
 
 

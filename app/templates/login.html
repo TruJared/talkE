@@ -1,16 +1,23 @@
 <div class="modal-header">
-    <h3 class="modal-title" id="modal-title">Welcome To Talke</h3>
+    <h1 class="modal-title" id="modal-title">Welcome To Talke</h1>
 </div>
 <div class="modal-body" id="modal-body">
+    <h3 class="alert alert-warning">Although I do clean up this website weekly, it is not monitored daily. I have it posted online for demonstration purposes only; any post at this site should be considered "at risk". In other words, don't post anything personal.</h3>
     <input class="modal-input" type="text" id="input" ng-model="login.userName" ng-minlength=3 ng-maxlength=15 placeholder="Enter Your User Name">
     <input class="modal-input" type="password" id="password-input" ng-model="login.password" placeholder="Enter Password">
-    <p>Name must be 3 to 15 characters in length.</p>
-
-
-    <!-- name validation -->
-    <p class="modal-warning alert alert-info" ng-hide="login.userName" >Invalid Name</p>
+    <p class="modal-warning alert alert-info" ng-hide="login.userName">User name should be 3 to 15 characters in length.</p>
 </div>
 <div class="modal-footer">
-    <button class="modal-button" type="button" ng-disabled="!login.userName || login.password !== '{Angular4Jared}'" ng-click="modal.loginok(login.userName)">Confirm</button>
-    <button class="modal-button" type="button" ng-disabled=true ng-click="modal.cancel() ">Cancel</button>
+    <button class="btn-info  btn-block" type="button" ng-disabled="!login.userName || login.password !== '{Dr. Angula}'" ng-click="modal.loginok(login.userName)">Confirm Credentials</button>
+    <button class="modal-button" type="button" ng-disabled=true ng-click="modal.cancel() " ng-hide=true>Cancel</button>
+    <h4>If you arrived here without an invite, you can request login credentials through <a href="mailto:jtruscott78@gmail.com?Subject=talke" target="_top" id="login-email">email</a>.</h4>
+    <footer>
+        <ul>
+            <!-- https://www.iconfinder.com/iconsets/typicons-2 -->
+            <li><a href="https://facebook.com/jerryrad" target="_blank"><img src="/assets/images/facebook.png" alt="facebook footer icon"></a></li>
+            <li><a href="https://twitter.com/trujared" target="_blank"><img src="/assets/images/twitter.png" alt="twitter footer icon"></a></li>
+            <li><a href="https://github.com/trujared" target="_blank"><img src="/assets/images/github.png" alt="github footer icon"></a></li>
+            <li><a href="http://trujared.com" target="_blank"><img src="/assets/images/globe.png" alt="globe footer icon"></a></li>
+        </ul>
+    </footer>
 </div>

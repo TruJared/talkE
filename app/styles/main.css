@@ -126,7 +126,8 @@ button:active {
 button[disabled],
 button:focus[disabled],
 button:hover[disabled],
-button:active[disabled] {
+button:active[disabled],
+.btn-info[disabled]:hover {
     cursor: not-allowed;
 
     color: #555;
@@ -300,6 +301,17 @@ footer li img {
 
 .modal-footer {
     text-align: left;
+}
+
+#modal-title {
+    color: #69c;
+    text-shadow: 1px 1px 2px lime;
+
+}
+
+#login-email:hover{
+
+    text-shadow: none;
 }
 
 

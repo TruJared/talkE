@@ -4,7 +4,7 @@
     if (!currentUser || currentUser ) { //force login every time page loads
             $uibModal.open({
                 templateUrl: '/templates/login.html',
-                size: 'sm',
+                size: 'lg',
                 controller: 'ModalCtrl as modal',
                 keyboard: false,
                 backdrop: 'static'
