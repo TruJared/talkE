@@ -1,7 +1,7 @@
 #### [talkE](https://talke-1d539.firebaseapp.com/) is a prototype chat application written in AngularJS, utilizing Google Firebase for the database, and featuring a fun and simple 80's retro theme.
 <br>
 
-<a href="https://talke-1d539.firebaseapp.com/" target="_blank"><img src="{{ site.baseurl }}/img/talke-logo.png"></a>
+<a href="https://talke-1d539.firebaseapp.com/" target="_blank"><img src="https://talke-1d539.firebaseapp.com/assets/images/talke-logo.png"></a>
 
 ## Explanation
 
